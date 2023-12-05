@@ -1,0 +1,17 @@
+---
+const {imageOptions} = Astro.props;
+const {path} = Astro.props;
+const {client} = Astro.props;
+const {description} = Astro.props;
+---
+<div class={`${imageOptions} flex flex-col`}>
+  <div class="flex flex-row gap-2">
+    <div class="text-sm font-medium text-white">
+         {client}
+    </div>
+    <div class="text-sm mb-3 opacity-40">
+         {description}
+    </div>
+  </div>
+  <img src={path} alt="" class="rounded-md" />
+</div>
