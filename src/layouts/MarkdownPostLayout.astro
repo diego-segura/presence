@@ -1,0 +1,27 @@
+---
+const { frontmatter } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diego Segura</title>
+    <meta name="description" content="The work of Diego Segura, a designer, writer, and founder based in Lower Manhattan." />
+    <meta name="author" content="Diego Segura" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <div class="flex flex-row">
+      <div class="m-4 h-full items-center">
+        <h1 class="text-sm">{frontmatter.title}</h1>
+        <p class="text-xs text-neutral-400">
+        {new Date(frontmatter.date).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}, {frontmatter.tags}
+        </p>
+      </div>
+      <div class="grow">
+        <slot />
+      </div>
+    </div>
+  </body>
+</html>

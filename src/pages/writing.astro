@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+
+const allPosts = await getCollection("posts");
+---
+
+<Base title="diego's writings" description="poetry, posts, journal entries">
+
+  <ul class="px-4">
+    {
+    allPosts.map((post) => (
+    <li class="py-4">
+      <div class="flex flex-col group transition duration-300">
+        <a href={`/posts/${post.slug}/`}>
+          <span class="text-neutral-600 group-hover:text-black lowercase transition duration-300">{post.data.title}</span>
+          <div class="text-xs text-neutral-400 group-hover:text-neutral-700 pt-0.5 transition duration-300">
+                  {new Date(post.data.date).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}, {post.data.tags}
+          </div>
+        </a>
+      </div>
+    </li>
+    ))
+    }
+  </ul>
+</Base>
