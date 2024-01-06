@@ -2,59 +2,86 @@
 import Base from '../layouts/Base.astro';
 import WorkImage from '../components/WorkImage.astro';
 import WorkVimeo from '../components/WorkVimeo.astro';
+import Nav from '../components/Nav.astro';
 ---
 
 <Base title="Page Title" description="Page Description">
-  <div class="grid grid-cols-1 lg:grid-cols-4 p-6 antialiased bg-black text-white">
-    <div class="col-span-1 pr-4 lg:self-start lg:sticky lg:top-6">
-      <div class="mb-20 text-white">
-        Diego Segura
-      </div>
-      <div class="max-w-[36ch]">
-        Designer, strategist, founder. Currently freelancing and building <a target="_blank" href="https://terms.so" class="border-b border-1 border-neutral-500 hover:cursor-pointer hover:border-white">Terms</a>.
-      </div>
-      <div class="max-w-[36ch] mt-4">
-        <a target="_blank" href="mailto:diegosegura@hey.com" class="border-b border-1 border-neutral-500 hover:cursor-pointer hover:border-white">Email</a>, <a target="_blank" href="https://instagram.com/messybirkin" class="border-b border-1 border-neutral-500 hover:cursor-pointer hover:border-white">Instagram</a>, <a target="_blank" href="https://x.com/messybirkin" class="border-b border-1 border-neutral-500 hover:cursor-pointer hover:border-white">X</a>
-      </div>
+  <Nav />
+  <div class="min-h-[90vh] flex flex-col justify-center items-center">
+    <div class="font-serif text-center leading-[0.9] text-[8vw] md:text-[7vw] tracking-tight antialiased">
+      Diego is also known <br />as <i class="tracking-tighter">messybirkin</i>.
     </div>
-    <div class="col-span-1 lg:col-span-3 min-[1800px]:col-span-2">
-      <div class="mb-20 mt-20 lg:mt-0 text-white">
-        Brands, products, and companies I've designed:
-      </div>
-      <div class="flex flex-col md:grid md:grid-cols-2 md:gap-x-2 gap-y-6">
-        <WorkVimeo client="Medium" description="Brand identity, website" vimeoOptions="col-span-1 md:col-span-2" vimeoLink="467093186" />
-        <WorkImage client="Medium" description="Logo and wordmark" imageOptions="col-span-1" path="COLLINS_MEDIUM_00.gif" />
-        <WorkImage client="Medium" description="Brand identity" imageOptions="col-span-1" path="medium-10.jpg" />
-        <WorkVimeo client="Medium" description="Wordmark" vimeoOptions="col-span-2" vimeoLink="467367059" />
-        <div class="col-span-2">
-          <div class="flex flex-row gap-2">
-            <div class="text-sm font-medium text-white">
-              Terms
-            </div>
-            <div class="text-sm mb-3 opacity-40">
-              Product, identity, development
-            </div>
+  </div>
+  <div class="max-w-2xl mx-auto m-6 text-[18px] antialiased">
+    Diego Segura is a <a href="/design">designer</a>, writer, and founder.<br /><br />
+    Previously, he co-founded NATION Builders, Incorporated. Backed by Placeholder, M13, Slow, Circle, and Tribe Ventures, the company went on to build Nation, Caro, and Vellum. Before that, he was a Senior Designer at Waybridge (acq. Minehub).<br /><br />
+    He began his career as the youngest designer ever hired at the prolific brand transformation agency, COLLINS. He is the author of a 2018 book, The Dropout Manifesto.
+He is @messybirkin on Instagram and X, and is reachable via email.
+  </div>
+  <div class="max-w-2xl mx-auto p-6 text-[18px] antialiased mb-40">
+    <div>
+      <div class="mb-6">
+        <div class="">
+          What I do
+        </div>
+        <div class="pl-8">
+          <div class="">
+            Brand strategy, positioning, vision setting
           </div>
-          <div class="rounded-md overflow-hidden">
-            <video width="2015" height="1440" autoplay loop muted>
-              <source src="terms-hover-2.mp4" type="video/mp4">
-            </video>
+          <div class="">
+            Logo and identity design
+          </div>
+          <div class="">
+            Website design
+          </div>
+          <div class="">
+            Product research and consulting
+          </div>
+          <div class="">
+            Frontend engineering, styling
           </div>
         </div>
-        <WorkImage client="Warner Music Group" description="Aretha Franklin poster" imageOptions="col-span-1" path="wmg-2.png" />
-        <WorkImage client="Bonside" description="Logo, brand identity, and writing" imageOptions="col-span-1" path="_bonside3.png" />
-        <WorkVimeo client="Match" description="Minisite" vimeoOptions="col-span-2" vimeoLink="692342072" />
-        <WorkImage client="Lorescan" description="Brand identity and product" imageOptions="col-span-1" path="_lore10.png" />
-        <WorkImage client="Vellum" description="Logo" imageOptions="col-span-1" path="_vellum3.png" />
-        <WorkImage client="The Optimism Company" description="Brand identity" imageOptions="col-span-1 md:col-span-2" path="_optimism1.png" />
-        <WorkImage client="The Optimism Company" description="Brand identity" imageOptions="col-span-1" path="_optimism8.png" />
-        <WorkImage client="The Optimism Company" description="Brand identity" imageOptions="col-span-1" path="_optimism2.png" />
-        <WorkImage client="Waybridge" description="Logo and brand identity" imageOptions="col-span-1" path="waybridge-1.jpg" />
-        <WorkImage client="Waybridge" description="Logo and brand identity" imageOptions="col-span-1" path="waybridge-2.gif" />
-        <WorkImage client="Scope3" description="Brand identity" imageOptions="col-span-1 md:col-span-2" path="_scope3-5.png" />
-        <WorkImage client="Scope3" description="Brand identity" imageOptions="col-span-1" path="_scope3-4.png" />
-        <WorkImage client="Scope3" description="Brand identity" imageOptions="col-span-1" path="_scope3-1.png" />
       </div>
+      <div class="mb-6">
+        <div class="">
+          Select clients
+        </div>
+        <div class="pl-8">
+          <div class="">Medium</div>
+          <div class="">Target</div>
+          <div class="">Warner Music Group</div>
+          <div class="">Bonside</div>
+          <div class="">
+            Waybridge <span class="opacity-50">(acq. Minehub)</span>
+          </div>
+          <div class="">Scope3</div>
+          <div class="">Edgewell Personal Care</div>
+          <div class="">Simon Sinek</div>
+          <div class="">The Optimism Company</div>
+          <div class="">Match</div>
+          <div class="">Lockchain</div>
+          <div class="">Handstamp</div>
+          <div class="">Lorescan</div>
+          <div class="">COLLINS</div>
+        </div>
+      </div>
+      <div class="mb-6">
+        <div class="">
+          Products I've created
+        </div>
+        <div class="pl-8">
+          <a href="https://terms.so" class="border-b border-neutral-300 hover:border-black">Terms</a>
+          <div class="">Land</div>
+          <div class="">Nation</div>
+          <div class="">Caro</div>
+          <div class="">Vellum</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a href="/portfolio" class="border-b border-neutral-300 hover:border-black">
+      See the portfolio
+      </a>
     </div>
   </div>
 </Base>

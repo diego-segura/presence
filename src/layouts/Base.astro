@@ -7,8 +7,39 @@
     <meta name="author" content="Diego Segura" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="https://use.typekit.net/rfz2dub.css">
   </head>
   <body>
     <slot></slot>
   </body>
 </html>
+<style is:global>
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @font-face {
+      font-family: 'TimesNow'; 
+      src: url('/JHA_Times_Now_SemiLight.otf') format('opentype'); 
+      font-weight: normal; 
+      font-style: normal; 
+    }
+  @font-face {
+      font-family: 'TimesNow'; 
+      src: url('/JHA_Times_Now_SemiLight_Italic.otf') format('opentype'); 
+      font-weight: normal; 
+      font-style: italic; 
+    }
+  @font-face {
+      font-family: 'TimesNow'; 
+      src: url('/JHA_Times_Now_SemiBold.otf') format('opentype'); 
+      font-weight: bold; 
+      font-style: normal; 
+    }
+  @font-face {
+      font-family: 'TimesNow'; 
+      src: url('/JHA_Times_Now_SemiBold_Italic.otf') format('opentype'); 
+      font-weight: bold; 
+      font-style: italic; 
+    }
+</style>

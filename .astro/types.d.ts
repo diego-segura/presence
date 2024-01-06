@@ -175,77 +175,12 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"posts": {
-"2021-10-14.md": {
-	id: "2021-10-14.md";
-  slug: "2021-10-14";
+"2023-12-31.md": {
+	id: "2023-12-31.md";
+  slug: "2023-12-31";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
-"2021-10-16.md": {
-	id: "2021-10-16.md";
-  slug: "2021-10-16";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
-"2021-11-21.md": {
-	id: "2021-11-21.md";
-  slug: "2021-11-21";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
-"2021-11-29.md": {
-	id: "2021-11-29.md";
-  slug: "2021-11-29";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
-"2021-12-21.md": {
-	id: "2021-12-21.md";
-  slug: "2021-12-21";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
-"2022-07-03.md": {
-	id: "2022-07-03.md";
-  slug: "2022-07-03";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
-"2023-12-10.md": {
-	id: "2023-12-10.md";
-  slug: "2023-12-10";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
-"2023-12-9.md": {
-	id: "2023-12-9.md";
-  slug: "2023-12-9";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
-"test.md": {
-	id: "test.md";
-  slug: "test";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
-};
-"voice": {
-"test.md": {
-	id: "test.md";
-  slug: "test";
-  body: string;
-  collection: "voice";
-  data: InferEntrySchema<"voice">
 } & { render(): Render[".md"] };
 };
 

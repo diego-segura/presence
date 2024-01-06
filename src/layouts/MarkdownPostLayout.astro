@@ -1,5 +1,7 @@
 ---
 const { frontmatter } = Astro.props;
+import Nav from '../components/Nav.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 ---
 <html lang="en">
   <head>
@@ -10,18 +12,56 @@ const { frontmatter } = Astro.props;
     <meta name="author" content="Diego Segura" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="https://use.typekit.net/rfz2dub.css">
   </head>
   <body>
-    <div class="flex flex-row">
+    <Nav />
+    <div class="min-h-[90vh] flex flex-col justify-center items-center">
+      <div class="font-serif text-center leading-[0.9] text-[8vw] md:text-[7vw] max-w-[20ch] tracking-tight antialiased">
+        <h1>{frontmatter.title}</h1>
+      </div>
       <div class="m-4 h-full items-center">
-        <h1 class="text-sm">{frontmatter.title}</h1>
         <p class="text-xs text-neutral-400">
-        {new Date(frontmatter.date).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}, {frontmatter.tags}
+        {frontmatter.tags} —<FormattedDate date={frontmatter.date} />
         </p>
       </div>
-      <div class="grow">
-        <slot />
-      </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto antialiased mb-40">
+      <slot />
     </div>
   </body>
 </html>
+<style>
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @font-face {
+    font-family: 'TimesNow';
+    src: url('/JHA_Times_Now_SemiLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'TimesNow';
+    src: url('/JHA_Times_Now_SemiLight_Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'TimesNow';
+    src: url('/JHA_Times_Now_SemiBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'TimesNow';
+    src: url('/JHA_Times_Now_SemiBold_Italic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  ul li strong {
+    font-size: 24px;
+  }
+</style>
