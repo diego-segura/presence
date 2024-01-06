@@ -1,5 +1,15 @@
 declare module 'astro:content' {
 	interface Render {
+		'.mdx': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
+	interface Render {
 		'.md': Promise<{
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
@@ -155,11 +165,11 @@ declare module 'astro:content' {
 			? {
 					collection: C;
 					slug: ValidContentEntrySlug<C>;
-			  }
+				}
 			: {
 					collection: C;
 					id: keyof DataEntryMap[C];
-			  }
+				}
 	>;
 	// Allow generic `string` to avoid excessive type errors in the config
 	// if `dev` is not running to update as you edit.
@@ -175,13 +185,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"posts": {
-"2023-12-31.md": {
-	id: "2023-12-31.md";
+"2023-12-31.mdx": {
+	id: "2023-12-31.mdx";
   slug: "2023-12-31";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
 };
 
 	};

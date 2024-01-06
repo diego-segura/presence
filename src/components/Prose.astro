@@ -7,10 +7,12 @@
            leading-[1.5]
            flex flex-col gap-6
            m-4
+           prose-a:underline
+           hover:prose-a:text-[#FF0000]
 
            prose-p:leading-6
            prose-strong:text-black
-           text-neutral-700
+           text-black
 
            prose-headings:mx-auto
            prose-headings:text-black
@@ -24,12 +26,15 @@
            prose-headings:py-8
 
            prose-ul:pl-6
+           prose-ul:pt-4
            prose-ul:pb-6
            prose-ol:pl-6
            prose-ol:pb-6
            prose-ul:list-disc
            prose-ol:list-decimal
            prose-li:ml-6
+
+           prose-th:py-4
 
     ">
   <slot />
