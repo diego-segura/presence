@@ -7,18 +7,18 @@ import Nav from '../components/Nav.astro';
 
 <Base title="Page Title" description="Page Description">
   <Nav />
-  <div class="min-h-[90vh] flex flex-col justify-center items-center">
-    <div class="font-serif text-center leading-[0.9] text-[8vw] md:text-[7vw] tracking-tight antialiased">
-      Diego is also known <br />as <i class="tracking-tighter">messybirkin</i>.
+  <div class="min-h-[80vh] md:min-h-[90vh] flex flex-col justify-center items-center">
+    <div class="font-serif text-center leading-[0.9] text-[12vw] md:text-[7vw] tracking-tight antialiased">
+      Diego Segura
     </div>
   </div>
-  <div class="max-w-2xl mx-auto m-6 text-[18px] antialiased">
-    Diego Segura is a <a href="/design">designer</a>, writer, and founder.<br /><br />
-    Previously, he co-founded NATION Builders, Incorporated. Backed by Placeholder, M13, Slow, Circle, and Tribe Ventures, the company went on to build Nation, Caro, and Vellum. Before that, he was a Senior Designer at Waybridge (acq. Minehub).<br /><br />
-    He began his career as the youngest designer ever hired at the prolific brand transformation agency, COLLINS. He is the author of a 2018 book, The Dropout Manifesto.
-He is @messybirkin on Instagram and X, and is reachable via email.
+  <div class="max-w-3xl mx-auto px-4 text-[18px] antialiased">
+    Diego Segura is a <a href="/design">designer</a>, <a href="/writing">writer</a>, and <a href="https://terms.so">founder</a>.<br /><br />
+    Previously, he co-founded NATION Builders, Inc. Backed by Placeholder, M13, Slow, Circle, and Tribe Ventures, the company went on to build Nation, Caro, and Vellum. Before that, he was a Senior Designer at Waybridge (acq. Minehub).<br /><br />
+    He began his career as the youngest designer ever hired at the prolific brand transformation agency, <a href="https://wearecollins.com/">COLLINS</a>. He is the author of a 2018 book, <a href="https://www.amazon.com/Dropout-Manifesto-educational-institution-schooling/dp/1980887683">The Dropout Manifesto</a>.
+    <br /><br />He is <a href="https://instagram.com/messybirkin">@messybirkin</a> on <a href="https://instagram.com/messybirkin">Instagram</a> and <a href="https://x.com/messybirkin">X</a>, and is reachable via <a href="mailto:diegosegura@hey.com">email</a>.
   </div>
-  <div class="max-w-2xl mx-auto p-6 text-[18px] antialiased mb-40">
+  <div class="max-w-3xl px-4 pt-6 mx-auto text-[18px] antialiased mb-40">
     <div>
       <div class="mb-6">
         <div class="">
@@ -70,7 +70,7 @@ He is @messybirkin on Instagram and X, and is reachable via email.
           Products I've created
         </div>
         <div class="pl-8">
-          <a href="https://terms.so" class="border-b border-neutral-300 hover:border-black">Terms</a>
+          <a href="https://terms.so">Terms</a>
           <div class="">Land</div>
           <div class="">Nation</div>
           <div class="">Caro</div>
@@ -79,9 +79,18 @@ He is @messybirkin on Instagram and X, and is reachable via email.
       </div>
     </div>
     <div>
-      <a href="/portfolio" class="border-b border-neutral-300 hover:border-black">
+      <a href="/portfolio">
       See the portfolio
       </a>
     </div>
   </div>
 </Base>
+<style>
+  a {
+    text-decoration: underline;
+
+  }
+  a:hover {
+    color: #FF0000;
+  }
+</style>
