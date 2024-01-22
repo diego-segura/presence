@@ -1,7 +1,5 @@
 # Astro
 
-This is the Terms-Eccles website.
-
 This directory is a brief example of an [Astro](https://astro.build/) site that can be deployed to Vercel with zero configuration. This demo showcases:
 
 - `/` - A static page (pre-rendered)
