@@ -2,46 +2,75 @@
 import Base from '../layouts/Base.astro';
 import WorkImage from '../components/WorkImage.astro';
 import WorkVimeo from '../components/WorkVimeo.astro';
+import WorkListing from '../components/WorkListing.astro';
 import Nav from '../components/Nav.astro';
 ---
 
-<Base title="Page Title" description="Page Description">
+<Base options="">
   <Nav />
-  <div class="text-sm antialiased mt-10 max-w-4xl text-center mx-auto py-20">
+  <div class="text-sm antialiased mt-10 max-w-4xl text-center mx-auto pt-20">
     To work together, <a href="mailto:diegosegura@hey.com" class="border-b border-neutral-300 hover:border-black transition duration-300">email</a> or <a href="https://calendly.com/segura-diego" class="border-b border-neutral-300 hover:border-black transition duration-300">book time</a>.
   </div>
-  <div class="max-w-4xl mx-auto px-4 antialiased flex flex-col md:grid md:grid-cols-2 md:gap-x-2 gap-y-6 mb-40">
+  <div class="max-w-5xl mx-auto px-4 antialiased flex flex-col md:grid md:grid-cols-2 md:gap-x-2 gap-y-2 mb-40">
+    <WorkListing name="Medium" description="Logo and brand identity for the world-renowned publishing platform.">
+    </WorkListing>
     <WorkVimeo client="Medium" description="Brand identity, website" vimeoOptions="col-span-1 md:col-span-2" vimeoLink="467093186" />
-    <WorkImage client="Medium" description="Logo and wordmark" imageOptions="col-span-1" path="COLLINS_MEDIUM_00.gif" />
-    <WorkImage client="Medium" description="Brand identity" imageOptions="col-span-1" path="medium-10.jpg" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="COLLINS_MEDIUM_00.gif" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="medium-10.jpg" />
     <WorkVimeo client="Medium" description="Wordmark" vimeoOptions="col-span-2" vimeoLink="467367059" />
-    <div class="col-span-2">
-      <div class="flex flex-row gap-2">
-        <div class="text-sm font-medium ">
-          Terms
-        </div>
-        <div class="text-sm mb-3 opacity-40">
-          Product, identity, development
-        </div>
-      </div>
-      <div class="rounded-md overflow-hidden">
+
+    <WorkListing name="Lockchain" description="Logo, identity, product, website, and development for a one-of-a-kind risk management platform for digital assets." typography="max-w-[48ch]">
+    </WorkListing>
+    <img class="col-span-2 rounded-md lg:rounded-xl border border-neutral-200" src="work/lockchain-1.png" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/lockchain-2.jpg" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/lockchain-3.png" />
+
+    <WorkListing name="Bonside" description="Logo, identity, and product for Bonside, flexible financing for brick & mortar." typography="max-w-[36ch]">
+    </WorkListing>
+    <img class="col-span-2 rounded-md lg:rounded-xl border border-neutral-200" src="work/bonside-1.png" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/bonside-2.jpg" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/bonside-3.png" />
+
+    <WorkListing name="Lore" description="Product and brand design for Lore, a plain-language, utilitarian block explorer." typography="max-w-[36ch]">
+    </WorkListing>
+    <img class="col-span-2 rounded-md lg:rounded-xl border border-neutral-200" src="work/lore-1.png" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/lore-2.png" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/lore-3.png" />
+    <img class="col-span-2 rounded-md lg:rounded-xl border border-neutral-200" src="work/lore-4.png" />
+
+    <WorkListing name="The Optimism Company" description="Brand identity and logo design for Simon Sinek's media company.">
+    </WorkListing>
+    <img class="col-span-2 rounded-md lg:rounded-xl" src="work/optimism-1.png" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/optimism-2.png" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/optimism-3.png" />
+    <img class="col-span-2 rounded-md lg:rounded-xl" src="work/optimism-4.png" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/optimism-5.png" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/optimism-6.png" />
+
+    <WorkListing name="Scope3" description="Brand identity, logo, and product design for an ad tech sustainability platform.">
+    </WorkListing>
+    <img class="col-span-2 rounded-md lg:rounded-xl border border-neutral-200" src="work/scope3-1.png" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/scope3-2.png" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/scope3-3.png" />
+
+    <WorkListing name="Vellum" description="Product, brand for a breakthrough e-signature solution built on Solana." typography="max-w-[36ch]">
+    </WorkListing>
+    <img class="col-span-2 rounded-md lg:rounded-xl" src="work/vellum-1.jpg" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/vellum-2.png" />
+    <img class="col-span-1 rounded-md lg:rounded-xl" src="work/vellum-3.png" />
+
+    <!--
+    <WorkListing name="Terms" description="Landing page for .">
+    </WorkListing>
+      <div class="rounded-md lg:rounded-xl overflow-hidden">
         <video width="2015" height="1440" autoplay loop muted>
           <source src="terms-hover-2.mp4" type="video/mp4">
         </video>
       </div>
+    -->
+    <div class="text-sm antialiased mt-10 max-w-4xl text-center mx-auto pt-20">
+      To work together, <a href="mailto:diegosegura@hey.com" class="border-b border-neutral-300 hover:border-black transition duration-300">email</a> or <a href="https://calendly.com/segura-diego" class="border-b border-neutral-300 hover:border-black transition duration-300">book time</a>.
     </div>
-    <WorkImage client="Warner Music Group" description="Aretha Franklin poster" imageOptions="col-span-1" path="wmg-2.png" />
-    <WorkImage client="Bonside" description="Logo, brand identity, and writing" imageOptions="col-span-1" path="_bonside3.png" />
-    <WorkVimeo client="Match" description="Minisite" vimeoOptions="col-span-2" vimeoLink="692342072" />
-    <WorkImage client="Lorescan" description="Brand identity and product" imageOptions="col-span-1" path="_lore10.png" />
-    <WorkImage client="Vellum" description="Logo" imageOptions="col-span-1" path="_vellum3.png" />
-    <WorkImage client="The Optimism Company" description="Brand identity" imageOptions="col-span-1 md:col-span-2" path="_optimism1.png" />
-    <WorkImage client="The Optimism Company" description="Brand identity" imageOptions="col-span-1" path="_optimism8.png" />
-    <WorkImage client="The Optimism Company" description="Brand identity" imageOptions="col-span-1" path="_optimism2.png" />
-    <WorkImage client="Waybridge" description="Logo and brand identity" imageOptions="col-span-1" path="waybridge-1.jpg" />
-    <WorkImage client="Waybridge" description="Logo and brand identity" imageOptions="col-span-1" path="waybridge-2.gif" />
-    <WorkImage client="Scope3" description="Brand identity" imageOptions="col-span-1 md:col-span-2" path="_scope3-5.png" />
-    <WorkImage client="Scope3" description="Brand identity" imageOptions="col-span-1" path="_scope3-4.png" />
-    <WorkImage client="Scope3" description="Brand identity" imageOptions="col-span-1" path="_scope3-1.png" />
+  </div>
   </div>
 </Base>

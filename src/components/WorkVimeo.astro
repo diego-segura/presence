@@ -5,16 +5,7 @@ const {client} = Astro.props;
 const {description} = Astro.props;
 ---
 <div class={`${vimeoOptions} flex flex-col`}>
-  <div class="flex flex-row gap-2">
-    <div class="text-sm font-medium">
-      {client}
-    </div>
-    <div class="text-sm mb-3 opacity-40">
-      {description}
-    </div>
-  </div>
-
-  <div class="rounded-md overflow-hidden">
+  <div class="rounded-xl overflow-hidden">
     <div style="padding:66.66666% 0 0 0;position:relative;"><iframe src={`https://player.vimeo.com/video/${vimeoLink}?title=0&byline=0&portrait=0&autoplay=1&loop=1&autopause=0&color=ff5900&background=1`} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
   </div>
 </div>
