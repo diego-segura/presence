@@ -185,13 +185,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"posts": {
-"2023-12-31.mdx": {
-	id: "2023-12-31.mdx";
-  slug: "2023-12-31";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".mdx"] };
 };
 
 	};
@@ -202,5 +195,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = typeof import("../src/content/config");
+	type ContentConfig = never;
 }

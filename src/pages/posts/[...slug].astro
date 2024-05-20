@@ -1,21 +1,22 @@
 ---
-import { getCollection } from 'astro:content';
-import MarkdownPostLayout from '../../layouts/MarkdownPostLayout.astro';
-import Prose from '../../components/Prose.astro';
-
-export const prerender = true;
+import PortableText from "../../components/PortableText.astro";
+import Base from "../../layouts/Base.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getPost, getPosts } from "../../lib/sanity";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('posts');
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+  const posts = await getPosts();
+  return posts.map((post) => ({
+    params: { slug: post.slug.current },
   }));
 }
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+
+const { slug } = Astro.params
+const post = await getPost(slug);
+
+export const prerender = true;
 ---
-<MarkdownPostLayout frontmatter={entry.data}>
-  <Prose>
-    <Content />
-  </Prose>
-</MarkdownPostLayout>
+
+<PortableText portableText={post.body} title={post.title} author={post.author} publishedAt={post.publishedAt} excerpt={post.excerpt} tags={post.tags}/>
+<!-- </Layout> -->
+<!-- </Base> -->

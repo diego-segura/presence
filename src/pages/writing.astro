@@ -1,9 +1,12 @@
 ---
-import { getCollection } from "astro:content";
+import { getPosts } from "../lib/sanity";
+
 import Base from "../layouts/Base.astro";
 import Nav from "../components/Nav.astro";
 import FormattedDate from "../components/FormattedDate.astro";
-const allPosts = await getCollection("posts");
+
+const posts = await getPosts();
+
 ---
 
 <Base title="diego's writings" description="poetry, posts, journal entries">
@@ -20,20 +23,21 @@ const allPosts = await getCollection("posts");
     </div>
   </div>
   {
-  allPosts.map((post) => (
+  posts.length ? posts.map((post) => (
   <div class="w-full mx-auto text-center flex flex-col group transition duration-300 antialiased">
-    <a href={`/posts/${post.slug}/`}>
+    <a href={`/posts/${post.slug.current}/`}>
       <div class="flex flex-col">
-        <span class="font-serif text-[11vw] md:text-[7vw] lg:text-[6vw] tracking-tight group-hover:text-black transition duration-300">{post.data.title}</span>
-        <span class="text-xs md:text-base pt-1 md:pt-0 pb-3 md:pb-5">{post.data.excerpt}</span>
+        <span class="font-serif text-[11vw] md:text-[7vw] lg:text-[6vw] tracking-tight group-hover:text-black transition duration-300">{post.title}</span>
+        <span class="text-xs md:text-base pt-1 md:pt-0 pb-3 md:pb-5">{post.excerpt}</span>
       </div>
-      <div class="text-xs text-neutral-400 group-hover:text-neutral-700 pt-0.5 transition duration-300">
-        {post.data.tags} —<FormattedDate date={post.data.date} />
+      <div class="h-full items-center">
+        <p class="text-xs text-neutral-400">
+        {post.tags} —
+        <FormattedDate date={post.publishedAt} />
+        </p>
       </div>
     </a>
   </div>
-  ))
+  )): <div class="text-center">No posts yet</div>
   }
-
-
 </Base>

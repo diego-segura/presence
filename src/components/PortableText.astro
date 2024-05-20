@@ -1,5 +1,7 @@
 ---
-const { frontmatter } = Astro.props;
+import { PortableText as PortableTextInternal } from 'astro-portabletext';
+const { portableText, title, publishedAt, tags } = Astro.props;
+import Prose from './Prose.astro';
 import Nav from '../components/Nav.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 ---
@@ -7,7 +9,7 @@ import FormattedDate from '../components/FormattedDate.astro';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diego Segura</title>
+    <title>{title}</title>
     <meta name="description" content="The work of Diego Segura, a designer, writer, and founder based in Lower Manhattan." />
     <meta name="author" content="Diego Segura" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
@@ -19,15 +21,20 @@ import FormattedDate from '../components/FormattedDate.astro';
     <Nav />
     <div class="min-h-[90vh] flex flex-col justify-center items-center">
       <div class="font-serif text-center leading-[0.9] text-[13vw] md:text-[7vw] max-w-[20ch] tracking-tight antialiased">
-        <h1>{frontmatter.title}</h1>
+        <h1>{title}</h1>
       </div>
       <div class="m-4 h-full items-center">
         <p class="text-xs text-neutral-400">
-        {frontmatter.tags} —<FormattedDate date={frontmatter.date} />
+        {tags} —
+        <FormattedDate date={publishedAt} />
         </p>
       </div>
     </div>
-
+    <div class="max-w-3xl mx-auto antialiased mb-40 post_content">
+      <Prose>
+        <PortableTextInternal value={portableText} />
+      </Prose>
+    </div>
     <div class="max-w-3xl mx-auto antialiased mb-40">
       <slot />
     </div>
@@ -65,4 +72,5 @@ import FormattedDate from '../components/FormattedDate.astro';
   ul li strong {
     font-size: 24px;
   }
+  
 </style>
