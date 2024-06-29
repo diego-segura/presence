@@ -24,8 +24,8 @@ const allPosts = await getCollection("posts");
   <div class="w-full mx-auto text-center flex flex-col group transition duration-300 antialiased">
     <a href={`/posts/${post.slug}/`}>
       <div class="flex flex-col">
-        <span class="font-serif text-[11vw] md:text-[7vw] lg:text-[6vw] tracking-tight group-hover:text-black transition duration-300">{post.data.title}</span>
-        <span class="text-xs md:text-base pt-1 md:pt-0 pb-3 md:pb-5">{post.data.excerpt}</span>
+        <p class="mb-3 font-serif text-4xl md:text-6xl tracking-tight group-hover:text-black transition duration-300">{post.data.title}</p>
+        <p class="text-xs md:text-base pt-1 md:pt-0 pb-3 md:pb-5">{post.data.excerpt}</p>
       </div>
       <div class="text-xs text-neutral-400 group-hover:text-neutral-700 pt-0.5 transition duration-300">
         {post.data.tags} —<FormattedDate date={post.data.date} />
