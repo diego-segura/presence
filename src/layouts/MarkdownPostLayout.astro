@@ -33,36 +33,39 @@ import FormattedDate from '../components/FormattedDate.astro';
     </div>
   </body>
 </html>
-<style>
+<style is:global>
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   @font-face {
-    font-family: 'TimesNow';
-    src: url('/JHA_Times_Now_SemiLight.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
+      font-family: 'TimesNow';
+      src: url('/JHA_Times_Now_SemiLight.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
   @font-face {
-    font-family: 'TimesNow';
-    src: url('/JHA_Times_Now_SemiLight_Italic.otf') format('opentype');
-    font-weight: normal;
-    font-style: italic;
-  }
+      font-family: 'Programm';
+      src: url('/Gerstner-ProgrammRegular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
   @font-face {
-    font-family: 'TimesNow';
-    src: url('/JHA_Times_Now_SemiBold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-  }
+      font-family: 'Programm';
+      src: url('/Gerstner-ProgrammItalic.otf') format('opentype');
+      font-weight: normal;
+      font-style: italic;
+    }
   @font-face {
-    font-family: 'TimesNow';
-    src: url('/JHA_Times_Now_SemiBold_Italic.otf') format('opentype');
-    font-weight: bold;
-    font-style: italic;
-  }
-  ul li strong {
-    font-size: 24px;
-  }
+      font-family: 'Programm';
+      src: url('/Gerstner-ProgrammMedium.otf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
+    }
+  @font-face {
+      font-family: 'Programm';
+      src: url('/Gerstner-ProgrammMediumItalic.otf') format('opentype');
+      font-weight: bold;
+      font-style: italic;
+    }
 </style>

@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['neue-haas-grotesk-text', '"sans-serif"'],
+        'sans': ['Programm', '"sans-serif"'],
         'serif': ['TimesNow', '"Times New Roman"', '"serif"'],
       },
     },
