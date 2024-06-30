@@ -20,8 +20,10 @@ const allPosts = await getCollection("posts");
     </div>
   </div>
   {
-  allPosts.map((post) => (
-  <div class="w-full mx-auto text-center flex flex-col group transition duration-300 antialiased">
+  allPosts
+  .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))  // Sort posts by date in descending order
+  .map((post) => (
+  <div class="w-full mx-auto mb-24 text-center flex flex-col group transition duration-300 antialiased">
     <a href={`/posts/${post.slug}/`}>
       <div class="flex flex-col">
         <p class="mb-3 font-serif text-4xl md:text-6xl tracking-tight group-hover:text-black transition duration-300">{post.data.title}</p>
@@ -34,6 +36,5 @@ const allPosts = await getCollection("posts");
   </div>
   ))
   }
-
 
 </Base>
